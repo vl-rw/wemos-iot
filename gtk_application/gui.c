@@ -18,13 +18,13 @@ gboolean trigger_buttonSS = FALSE;
 
 int speed = 0;
 
-const char* header = "<!DOCTYPE html>\n<head>\n<title>\nArduino control page\n</title>\n<link rel='stylesheet' href='styles.css'>\n</head>\n<body>\n<h1>You are on arduino control page.</h1>\n<details>\n\n<p>@";
+const char* header = "<!DOCTYPE html>\n<head>\n<title>\nArduino control page\n</title>\n<link rel='stylesheet' href='styles.css'>\n</head>\n<body>\n<h1>You are on arduino control page.</h1>\n<details>\n\n<p>@00000000000000000000000000000000</p>\n\n<p>@10241024102410241024102410241024</p>\n\n<p>@09201024000400011024000000000000</p>\n\n<p>@10241024102410241024102410241024</p>\n\n<p>@09201024000400011024000000000000</p>\n\n<p>@";
 
 const char* command = "00000000000000000000000000000000";
 
 char* command_line = (char*)command;
 
-const char* tail = "</p>\n\n<p>@10241024102410241024102410241024</p>\n\n<p>@09201024000400011024000000000000</p>\n\n<p>@10241024102410241024102410241024</p>\n\n<p>@09201024000400011024000000000000</p>\n\n<p>@10241024102410241024102410240000</p>\n\n\n</details>\n\n\n<details>\n<summary>explanation</summary>\n\n<p>Arduino based devices come to this page and red the information (<a href='instructions.txt'>more</a>).</p>\n\n\n\n</details>\n\n\n</body>\n</html>";
+const char* tail = "</p>\n\n\n</details>\n\n\n<details>\n<summary>explanation</summary>\n\n<p>Arduino based devices come to this page and red the information (<a href='instructions.txt'>more</a>).</p>\n\n\n\n</details>\n\n\n</body>\n</html>";
 
 
 char status_SCL = '0';
