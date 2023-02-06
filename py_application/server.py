@@ -1,5 +1,3 @@
-import sys
-
 import http.server
 import socketserver
 

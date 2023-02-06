@@ -132,7 +132,9 @@ fs.readFile('ind.html', 'utf8', (err, data) => {
 
 });
 
-http.createServer((request, response) => {
+
+
+const server = http.createServer((request, response) => {
 
 
 	if (request.url === "") {
@@ -227,31 +229,6 @@ http.createServer((request, response) => {
 
 	};
 
-	// for device wifi6, get info
-/*
-	if (request.url === "/wifi6/a0") console.log(`wifi6 A0 - 0%`);
-	if (request.url === "/wifi6/a1") console.log(`wifi6 A0 - 5%`);
-	if (request.url === "/wifi6/a2") console.log(`wifi6 A0 - 10%`);
-	if (request.url === "/wifi6/a3") console.log(`wifi6 A0 - 15%`);
-	if (request.url === "/wifi6/a4") console.log(`wifi6 A0 - 20%`);
-	if (request.url === "/wifi6/a5") console.log(`wifi6 A0 - 25%`);
-	if (request.url === "/wifi6/a6") console.log(`wifi6 A0 - 30%`);
-	if (request.url === "/wifi6/a7") console.log(`wifi6 A0 - 35%`);
-	if (request.url === "/wifi6/a8") console.log(`wifi6 A0 - 40%`);
-	if (request.url === "/wifi6/a9") console.log(`wifi6 A0 - 45%`);
-	if (request.url === "/wifi6/a10") console.log(`wifi6 A0 - 50%`);
-	if (request.url === "/wifi6/a11") console.log(`wifi6 A0 - 55%`);
-	if (request.url === "/wifi6/a12") console.log(`wifi6 A0 - 60%`);
-	if (request.url === "/wifi6/a13") console.log(`wifi6 A0 - 65%`);
-	if (request.url === "/wifi6/a14") console.log(`wifi6 A0 - 70%`);
-	if (request.url === "/wifi6/a15") console.log(`wifi6 A0 - 75%`);
-	if (request.url === "/wifi6/a16") console.log(`wifi6 A0 - 80%`);
-	if (request.url === "/wifi6/a17") console.log(`wifi6 A0 - 85%`);
-	if (request.url === "/wifi6/a18") console.log(`wifi6 A0 - 90%`);
-	if (request.url === "/wifi6/a19") console.log(`wifi6 A0 - 95%`);
-	if (request.url === "/wifi6/a20") console.log(`wifi6 A0 - 100%`);
-*/
-
 	if (request.url === "/wifi6/a0") process.stdout.write(`wifi6 A0 - 0%\r`);
 	if (request.url === "/wifi6/a1") process.stdout.write(`wifi6 A0 - 5%\r`);
 	if (request.url === "/wifi6/a2") process.stdout.write(`wifi6 A0 - 10%\r`);
@@ -278,5 +255,11 @@ http.createServer((request, response) => {
 	fs.readFile("ind.html", (error, data) => response.end(data));
 
 
-}).listen(1200, ()=>console.log("Сервер запущен по адресу http://localhost:1200"));
+});
+
+
+//const wss = new WebSocket.Server({ noServer: true });
+//server.listen(1200, '127.0.0.1');
+server.listen(1200);
+console.log('Go to 192.168.0.1:1200');
 

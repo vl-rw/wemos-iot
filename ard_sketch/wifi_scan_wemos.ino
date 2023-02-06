@@ -10,7 +10,7 @@
 //connect the wifi
 const char* ssid = "TP-Link_D7DC";
 const char* password = "55044394";
-const char* serverName = "http://192.168.0.111:1200/";
+const char* serverName = "http://127.0.0.1:1200/";
 
 // device place information
 const int this_device_number = 5;
